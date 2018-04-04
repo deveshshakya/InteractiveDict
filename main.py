@@ -13,7 +13,7 @@ def finder(word):
         return data[word.title()]
     elif word.upper() in data:
         return data[word.upper()]
-    elif len(get_close_matches(word, data.keys(), cutoff=0.8)) > 0:
+    elif len(get_close_matches(word, data.keys(), cutoff=0.8)) > 0:  # searching for similar matches
         ans = input("Did you mean {} instead? Enter Y if Yes, or N! ".format(get_close_matches(word, data.keys(), cutoff=0.8)[0]))
         if ans == 'Y' or 'y':
             return data[get_close_matches(word, data.keys())[0]]
@@ -28,7 +28,7 @@ def finder(word):
 word = input("Enter a word: ")
 output = finder(word.lower())
 if type(output) == list:
-    for meaning in output:
+    for meaning in output:  # for multiple meanings
         print(meaning)
 else:
     print(output)

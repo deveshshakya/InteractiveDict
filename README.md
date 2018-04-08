@@ -1,5 +1,6 @@
 # InteractiveDict
 An interactive user-friendly dictionary, developed in Python. With some intelligent features like auto-correct and multi-meanings of some word.
+
 49k+ words meanings are available.
 
 
